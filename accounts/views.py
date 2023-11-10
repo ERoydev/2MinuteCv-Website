@@ -24,7 +24,7 @@ def login_user(request):
             return redirect('my_account')
 
         else:
-            messages.error(request, "Your user ID or password is incorrect")
+            messages.warning(request, "Your user ID or password is incorrect")
             return redirect('login_user')
 
     else:
@@ -42,7 +42,7 @@ def logout_user(request):
 
 def register_user(request):
     if request.user.is_authenticated:
-        messages.error(request, 'You are already logged in!')
+        messages.warning(request, 'You are already logged in!')
         return redirect('home')
 
     elif request.method == "GET":
@@ -88,7 +88,7 @@ def forgot_password(request):
             return redirect('login_user')
 
         else:
-            messages.error(request, "Account with this email address does not exist.")
+            messages.warning(request, "Account with this email address does not exist.")
             return redirect('forgot_password')
 
     return render(request, 'accounts/forgot_password.html')
@@ -109,7 +109,7 @@ def reset_password_validate(request, uidb64, token):
         return redirect('reset_password')
 
     else:
-        messages.error(request, 'This link has been expired!')
+        messages.warning(request, 'This link has been expired!')
         return redirect('my_account')
 
 
@@ -129,7 +129,7 @@ def reset_password(request):
             return redirect('login_user')
 
         else:
-            messages.error(request, 'Passwords do not match!')
+            messages.warning(request, 'Passwords do not match!')
             return redirect('reset_password')
 
     return render(request, 'accounts/reset_password.html')
