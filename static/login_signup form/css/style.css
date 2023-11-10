@@ -171,3 +171,19 @@ a.google span{
 .alert {
     font-size: 15px!important;
 }
+
+
+.back-button {
+    margin-left: 25px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.button-container {
+    background-color: #4070f4;
+}
+
+.back-button:hover {
+    background-color: #ffffff;
+    color: #1f1f1f;
+}
