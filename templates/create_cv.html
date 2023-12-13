@@ -22,7 +22,7 @@
 
   <body>
     <div class="row">
-      <div class="col">
+      <div class="col left-container">
         <div class="left_side">
 
             <!-- USER INFORMATION -->
@@ -121,7 +121,7 @@
           <!-- PROFESSIONAL SUMMARY -->
         <div class="section">
           <h3>Professional Summary</h3>
-          <label class="summary-help">Write short senteces to make reader interested. Mention your experience, biggest achievements, qualities and skills.</label>
+          <label class="summary-help">Write short sentences to make reader interested. Mention your experience, biggest achievements, qualities and skills.</label>
           <div class="row main-text">
             <div class="col1">
                 <div class="second box">
@@ -158,64 +158,208 @@
 
             <!-- EXPERIENCE -->
           <h3>Experience</h3>
+            <label class="summary-help">Add your past experience so it can add value to your resume.</label>
 
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label>Job Title</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="experience_job_title"
-                    />
-                  </div>
-                <div class="form-group col-md-6">
-                    <label>Employer</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="experience_degree"
-                    />
-                  </div>
-            </div>
-
-            <div class="row">
-                <div class="form-group col-md-3">
-                    <label>Start Date</label>
-                    <input
-                      type="date"
-                      class="form-control"
-                      name="experience_start"
-                    />
-                  </div>
-                <div class="form-group col-md-3">
-                    <label>End Date</label>
-                    <input
-                      type="date"
-                      class="form-control"
-                      name="experience_end"
-                    />
-                  </div>
-                <div class="form-group col-md-6">
-                    <label>City</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="experience_city"
-                    />
-                  </div>
-            </div>
-
-            <div class="form-group col-md-12">
-                <div class="col2">
-                    <label>Description</label>
-                    <textarea class="form-control" style="height: 200px!important;"></textarea>
+            <div class="experience-box" onclick="experienceField()">
+                <div class="content">
+                    <p class="profession">Add your profession</p>
+                    <small class="time-working">Add time working</small>
+                    <i class="fa-solid fa-arrow-down-short-wide"></i>
                 </div>
-                <label>Write 200+ characters to increase your chances.</label>
+            </div>
+
+            <div class="experience-box" onclick="experienceField()">
+                <div class="content">
+                    <p class="profession">Add your profession</p>
+                    <small class="time-working">Add time working</small>
+                    <i class="fa-solid fa-arrow-down-short-wide"></i>
+                </div>
+            </div>
+
+           <div class="experience-box" onclick="experienceField()">
+                <div class="content">
+                    <p class="profession">Add your profession</p>
+                    <small class="time-working">Add time working</small>
+                    <i class="fa-solid fa-arrow-down-short-wide"></i>
+                </div>
+            </div>
+
+            <div class="experience-container">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label>Job Title</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="experience_job_title"
+                        />
+                      </div>
+                    <div class="form-group col-md-6">
+                        <label>Employer</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="experience_employer"
+                        />
+                      </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label>Start Date</label>
+                        <input
+                          type="date"
+                          class="form-control"
+                          name="experience_start"
+                        />
+                      </div>
+                    <div class="form-group col-md-3">
+                        <label>End Date</label>
+                        <input
+                          type="date"
+                          class="form-control"
+                          name="experience_end"
+                        />
+                      </div>
+                    <div class="form-group col-md-6">
+                        <label>City</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="experience_city"
+                        />
+                      </div>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <div class="col2">
+                        <label>Description</label>
+                        <textarea class="form-control" style="height: 200px!important;"></textarea>
+                    </div>
+                    <label>Write 200+ characters to increase your chances.</label>
+                </div>
             </div>
         </div>
 
       <!-- EDUCATION -->
+          <h3>Education</h3>
+              <div class="education-container">
+                  <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>School/University</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="education_school"
+                            />
+                          </div>
+                        <div class="form-group col-md-6">
+                            <label>Degree</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="education_degree"
+                            />
+                          </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Start Date</label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              name="education_start"
+                            />
+                          </div>
+                        <div class="form-group col-md-3">
+                            <label>End Date</label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              name="education_end"
+                            />
+                          </div>
+                        <div class="form-group col-md-6">
+                            <label>City</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="education_city"
+                            />
+                          </div>
+                    </div>
+
+                <div class="form-group col-md-12">
+                    <div class="col2">
+                        <label>Description</label>
+                        <textarea class="form-control" style="height: 200px!important;"></textarea>
+                    </div>
+                </div>
+              </div>
+
+          <!-- SKILLS -->
+          <h3>Skills</h3>
+          <label style="margin-bottom: 15px">Choose 3 important skills that you think are important for the Employer.</label>
+          <br>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Skill #1</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="skill_name1"
+                    />
+                  </div>
+                <div class="form-group col-md-6">
+                    <label>Skill Level</label>
+                    <input
+                      type="range"
+                      class="form-range"
+                      name="skill_range1"
+                    />
+                  </div>
+            </div>
+
+          <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Skill #2</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="skill_name2"
+                    />
+                  </div>
+                <div class="form-group col-md-6">
+                    <label>Skill Level</label>
+                    <input
+                      type="range"
+                      class="form-range"
+                      name="skill_range2"
+                    />
+                  </div>
+            </div>
+
+          <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Skill #3</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="skill_name3"
+                    />
+                  </div>
+                <div class="form-group col-md-6">
+                    <label>Skill Level</label>
+                    <input
+                      type="range"
+                      class="form-range"
+                      name="skill_range3"
+                    />
+                  </div>
+            </div>
+          <input type="button" class="form-group btn btn-primary col-md-12" value="Submit" />
       </div>
 
       <div class="col half">
@@ -233,5 +377,6 @@
 
     <!-- TEXT EDITOR JS -->
     <script src="{% static 'cvapp/create_cv.js' %}"></script>
+    <script src="{% static 'cvapp/functionality.js' %}"></script>
   </body>
 </html>

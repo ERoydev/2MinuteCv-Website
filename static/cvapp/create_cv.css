@@ -123,3 +123,86 @@ textarea {
   background-color: rgb(141, 141, 141);
   margin-top: 0;
 }
+
+.add-button {
+  border: none;
+  color: #35888a;
+  font-size: 20px;
+  font-weight: 400;
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.add-button:hover {
+  background-color: #1d2124;
+  color: white;
+}
+
+
+.left-container {
+  margin-bottom: 100px;
+}
+
+.skill-slider {
+  color: black;
+}
+
+/* Experience Field settings*/
+
+.experience-container {
+  display: none;
+}
+
+.education-container {
+  display: none;
+}
+
+.experience-box {
+  border: 1px solid rgba(180, 180, 180, 0.53);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.fa-arrow-down-short-wide {
+  color: #7d7d7d;
+}
+
+.experience-box:hover {
+  .profession {
+    color: rgba(82, 113, 255, 0.96);
+  }
+
+  .fa-arrow-down-short-wide {
+    color: rgba(82, 113, 255, 0.96);
+  }
+}
+
+.section {
+  margin-bottom: 15px;
+}
+
+.content {
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.profession {
+  margin-bottom: 0;
+  color: rgba(37, 33, 33, 0.83);
+  font-weight: 650;
+}
+
+.time-working {
+  color: gray;
+  font-weight: 500;
+}
+
+.fa-arrow-down-short-wide {
+  float: right;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-right: 20px;
+}
