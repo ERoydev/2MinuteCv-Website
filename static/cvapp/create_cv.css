@@ -63,12 +63,12 @@ button:hover {
   background: #40576d1a;
 }
 
-button:focus {
+.summary-button:focus {
   background: #73b1e333;
   color: #5271ff;
 }
 
-button.active {
+.summary-button.active {
   background: #73b1e333;
   color: #5271ff;
 }
@@ -170,7 +170,8 @@ textarea {
   margin-bottom: 10px;
 }
 
-.experience-box:hover {
+
+.education-box:hover {
   cursor: pointer;
 }
 
@@ -186,6 +187,7 @@ textarea {
   .fa-arrow-down-short-wide {
     color: rgba(82, 113, 255, 0.96);
   }
+
 }
 
 .section {
@@ -213,4 +215,46 @@ textarea {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   margin-right: 20px;
+}
+
+
+/* Education Field*/
+
+.experience-box:hover {
+  cursor: pointer;
+}
+
+.education-box {
+  border: 1px solid rgba(180, 180, 180, 0.53);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.education-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  width: 90%;
+}
+
+.education-container {
+  display: none;
+}
+
+.education-box:hover {
+  .profession {
+    color: rgba(82, 113, 255, 0.96);
+  }
+
+  .fa-arrow-down-short-wide {
+    color: rgba(82, 113, 255, 0.96);
+  }
+
+}
+
+.add-skills {
+  margin-bottom: 10px;
+  color: #981313;
+  font-weight: 350;
+  text-align: start;
 }
