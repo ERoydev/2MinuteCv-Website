@@ -3,7 +3,10 @@ from django.shortcuts import render, redirect, HttpResponse
 
 
 def create_cv(request):
-    return render(request, 'create_cv.html')
+    if request.user.is_authenticated:
+        return render(request, 'create_cv.html')
+    else:
+        return redirect('register_user')
 
 
 def template_view(request):

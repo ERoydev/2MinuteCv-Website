@@ -140,3 +140,4 @@ EMAIL_HOST_USER = 'veriftester123@gmail.com'
 EMAIL_HOST_PASSWORD = 'bgrvkaruwfxjvzed'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = '2MinuteCV <veriftester123@gmail.com>'
+

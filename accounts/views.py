@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.utils.http import urlsafe_base64_decode
-
+from .models import UserProfile
 from .utils import send_email
 
 

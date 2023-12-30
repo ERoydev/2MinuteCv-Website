@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-from .models import Customer
+from .models import Customer, UserProfile
 
 
 class MyUserAdmin(admin.ModelAdmin):
@@ -11,3 +11,4 @@ admin.site.unregister(User)
 admin.site.register(User, MyUserAdmin)
 
 admin.site.register(Customer)
+
