@@ -6,6 +6,10 @@ def create_cv(request):
     return render(request, 'create_cv.html')
 
 
+def template_view(request):
+    return render(request, 'cvapp/cv_templates/Modern Professional/template.html')
+
+
 def handle_skills(request):
     if request.method == "POST":
         skill_name = request.POST['skill_name']

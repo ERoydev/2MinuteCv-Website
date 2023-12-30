@@ -18,6 +18,8 @@
       <title>Document</title>
 
       <link rel="stylesheet" href="{% static 'cvapp/create_cv.css' %}" />
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
   </head>
 
   <body>
@@ -455,7 +457,7 @@
                       </div>
                 </div>
             </div>
-          <input type="submit" class="form-group btn btn-primary col-md-12" value="Submit" />
+          <input type="submit" class="form-group btn btn-primary col-md-12" value="Submit" onclick="loadTemplateOnHalf()" />
       </div>
 
       <div class="col half">

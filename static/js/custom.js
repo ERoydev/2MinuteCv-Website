@@ -39,7 +39,7 @@
 	/* ..............................................
     Properties Filter
     ................................................. */
-	var Container = $('.container');
+	var Container = $('.template-container');
 	Container.imagesLoaded(function () {
 		var portfolio = $('.properties-menu');
 		portfolio.on('click', 'button', function () {

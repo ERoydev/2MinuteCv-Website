@@ -1,3 +1,4 @@
+
 const textarea = document.getElementById("textarea");
 
 function f2(e) {
@@ -53,14 +54,3 @@ window.addEventListener("load",
   () => {
     textarea.value = "";
   });
-
-
-function loadSkills() {
-  const divEl = document.getElementsByClassName('skills-forms')[0];
-  if(divEl.style.display == 'none') {
-    divEl.style.display='inline'
-
-  } else {
-    divEl.style.display='none'
-  }
-}
