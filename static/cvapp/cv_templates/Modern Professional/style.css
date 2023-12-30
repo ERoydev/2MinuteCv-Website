@@ -225,3 +225,12 @@ p {
   height: 100%;
   background: #03a9f4;
 }
+
+.generateButton {
+  font-size: 22px;
+  margin-left: 50px;
+}
+
+.generateButton:hover {
+  font-size: 22.5px;
+}
