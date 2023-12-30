@@ -11,6 +11,8 @@ def handle_skills(request):
         skill_name = request.POST['skill_name']
         skill_range = request.POST['skill_range']
 
+        print('yesss')
+
         context = {
             'skill_name': skill_name,
             'skill_range': skill_range

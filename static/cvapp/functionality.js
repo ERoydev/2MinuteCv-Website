@@ -1,10 +1,3 @@
-const allTrashButtons = document.querySelectorAll('.trash-btn');
-
-for(let btn of allTrashButtons) {
-    btn.addEventListener('click', deleteField)
-}
-
-
 function experienceField(id_v) {
 
     const Boxes = Array.from(document.querySelectorAll('.experience-box'));
@@ -23,6 +16,8 @@ function experienceField(id_v) {
     fieldBoxElement.appendChild(fieldBox);
     fieldBox.style.display='block';
     fieldBoxElement.value=true;
+
+
 }
 
 function educationField(id_v) {

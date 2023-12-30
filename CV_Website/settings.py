@@ -131,11 +131,12 @@ STATICFILES_DIRS = [
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER= 'veriftester123@gmail.com'
+EMAIL_HOST_USER = 'veriftester123@gmail.com'
 EMAIL_HOST_PASSWORD = 'bgrvkaruwfxjvzed'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = '2MinuteCV <veriftester123@gmail.com>'
