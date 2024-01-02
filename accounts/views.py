@@ -6,8 +6,8 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.utils.http import urlsafe_base64_decode
-from .models import UserProfile
 from .utils import send_email
+from .models import UserProfile
 
 
 def login_user(request):
@@ -54,8 +54,11 @@ def register_user(request):
                 email = request.POST['email']
                 password = request.POST['password']
                 confirm_password = request.POST['confirm_password']
-                user = User.objects.create_user(email, password, confirm_password)
+                user = User.objects.create_user(email)
                 user.save()
+
+                user_profile = UserProfile.objects.create(username=email)
+
                 login(request, user)
                 return redirect('home')
 
