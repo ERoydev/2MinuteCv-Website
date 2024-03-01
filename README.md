@@ -55,8 +55,7 @@ This will typically run the server on http://127.0.0.1:8000/.
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome.<br />
-Feel free to check [issues page](https://github.com/kefranabg/readme-md-generator/issues) if you want to contribute.<br />
-[Check the contributing guide](./CONTRIBUTING.md).<br />
+
 
 
 ## Show your support
