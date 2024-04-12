@@ -29,3 +29,16 @@ label {
 .form-group input:hover {
   border: 2px solid rgba(79, 102, 177, 0.637);
 }
+
+.btn-submit {
+  background-color: rgb(75, 123, 228);
+  border-radius: 5px;
+  border: none;
+  font-size: 1.1em;
+}
+
+.btn-submit:focus,
+.btn-submit:hover {
+  background-color: rgb(83, 111, 172);
+  cursor: pointer;
+}

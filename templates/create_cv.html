@@ -16,7 +16,7 @@
   <body>
     <div class="main">
       <div class="col left-container">
-        <form class="information-user">
+        <form class="information-user" onsubmit="onSubmit(event)">
           <div class="left_side">
 
             <!-- USER INFORMATION -->
@@ -163,23 +163,8 @@
                 <label class="summary-help">Add your past experience so it can add value to your resume.</label>
 
                 <div>
-                  <i class="fa-solid fa-plus"></i>
-                </div>
-
-                <div class="experience-box">
-                    <div class="content">
-                        <div onclick="ExperienceForm(event)" class="inside-box">
-                            <p class="profession">Add your profession</p>
-                            <small class="time-working">Start - End date</small>
-                            <i class="fa-solid fa-arrow-down-short-wide dropdown-btn"></i>
-                        </div>
-                    </div>
-
-                    <div class="trash">
-                      <i class="fa-solid fa-trash"></i>
-                    </div>
-                </div>
-              
+                  <i class="fa-solid fa-plus" onclick="ExperienceBox(event)"></i>
+                </div>           
             </div>
 
             <!-- EDUCATION -->
@@ -187,21 +172,9 @@
               <h3>Education</h3>
               <label class="summary-help">Add your education if any.</label>
               
-              <div class="education-box">
-                  <div class="content">
-                      <div onclick="EducationForm(event)" class="inside-box">
-                          <p class="education-type">Add your education</p>
-                          <small class="study-time">Start - End date</small>
-                          <i class="fa-solid fa-arrow-down-short-wide dropdown-btn"></i>
-                      </div>
-                  </div>
-
-                  <div class="trash">
-                      <i class="fa-solid fa-trash"></i>
-                  </div>
-              </div>
-
-
+              <div>
+                  <i class="fa-solid fa-plus" onclick="EducationBox(event)"></i>
+                </div>    
             </div>
               
             <!-- SKILLS -->
@@ -220,7 +193,7 @@
             </div>
           </div>
               
-          <input type="submit" class="form-group btn btn-primary col-md-12" value="Submit" onclick="loadTemplateOnHalf()" />
+          <input type="submit" class="form-group btn-submit" value="Submit" />
         </form>
       </div>
 
@@ -238,6 +211,8 @@
     <script src="{% static 'cvapp/components/ExperienceForm.js' %}"></script>
     <script src="{% static 'cvapp/components/EducationForm.js' %}"></script>
     <script src="{% static 'cvapp/components/SkillsBox.js' %}"></script>
+    <script src="{% static 'cvapp/components/ExperienceBox.js' %}"></script>
+    <script src="{% static 'cvapp/components/EducationBox.js' %}"></script>
 
   </body>
 </html>

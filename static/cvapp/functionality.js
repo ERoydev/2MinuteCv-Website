@@ -1,13 +1,13 @@
 
-async function loadTemplateOnHalf() {
-    const div = document.querySelector('.right_side');
-    const result = await fetch('template/');
-    const template = await result.text();
+// async function loadTemplateOnHalf() {
+//     const div = document.querySelector('.right_side');
+//     const result = await fetch('template/');
+//     const template = await result.text();
 
-    div.innerHTML = template
-    div.style.transform = 'scale(0.9)';
-    div.style.transformOrigin = 'top left'
-}
+//     div.innerHTML = template
+//     div.style.transform = 'scale(0.9)';
+//     div.style.transformOrigin = 'top left'
+// }
 
 async function downloadPDF(e) {
     document.body.style.zoom = '67%';
@@ -78,4 +78,10 @@ function loadSkills() {
   } else {
     divEl.style.display='none'
   }
+}
+
+function onSubmit(event) {
+    event.preventDefault();
+
+    console.log('submited')
 }
