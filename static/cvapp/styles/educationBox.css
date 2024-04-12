@@ -3,6 +3,7 @@
     border: 1px solid rgb(209, 209, 209);
     padding: 0.5em 1em;
     border-radius: 5px;
+    position: relative;
 }
 
 .education-type {
@@ -16,7 +17,6 @@
     position: relative;
 }
 
-
 .education-box:focus,
 .education-box:hover {
     border: 1px solid rgba(31, 125, 180, 0.671);
@@ -27,7 +27,6 @@
         color: rgb(14, 87, 129);
         transition: 0.3s color ease-in;
     }
-    
 }
 
 .education-box .col2 {

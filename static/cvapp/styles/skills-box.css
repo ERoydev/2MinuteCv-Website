@@ -1,0 +1,11 @@
+.skills-row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.skills-row .trash {
+    top: 50%;
+    transform: translateY(-20%);
+    right: -10px;
+}

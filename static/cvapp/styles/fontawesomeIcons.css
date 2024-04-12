@@ -1,0 +1,30 @@
+
+.fa-plus {
+    font-size: 1.3em;
+    padding: 0.5em;
+    background-color: rgb(236, 236, 236);
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.fa-plus:focus,
+.fa-plus:hover {
+    background-color: rgb(179, 179, 179);
+    cursor: pointer;
+    color: rgb(53, 132, 185);
+    transition: 0.3s all ease-in;
+}
+
+.trash {
+    position: absolute;
+    right: -21px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(190, 2, 2);
+    cursor: pointer;
+}
+
+.trash:focus,
+.trash:hover {
+    color: rgb(197, 87, 87);
+}

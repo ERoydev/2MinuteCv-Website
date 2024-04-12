@@ -67,8 +67,6 @@ experienceContainer.innerHTML = `
                     <label>Write 200+ characters to increase your chances.</label>
                 </div>
             </div>
-
-
         `
 function ExperienceForm(event) {
     const divEl = event.target.parentNode.parentNode.parentNode;

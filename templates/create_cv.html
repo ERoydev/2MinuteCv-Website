@@ -162,6 +162,10 @@
               <h3>Experience</h3>
                 <label class="summary-help">Add your past experience so it can add value to your resume.</label>
 
+                <div>
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+
                 <div class="experience-box">
                     <div class="content">
                         <div onclick="ExperienceForm(event)" class="inside-box">
@@ -169,6 +173,10 @@
                             <small class="time-working">Start - End date</small>
                             <i class="fa-solid fa-arrow-down-short-wide dropdown-btn"></i>
                         </div>
+                    </div>
+
+                    <div class="trash">
+                      <i class="fa-solid fa-trash"></i>
                     </div>
                 </div>
               
@@ -187,111 +195,28 @@
                           <i class="fa-solid fa-arrow-down-short-wide dropdown-btn"></i>
                       </div>
                   </div>
+
+                  <div class="trash">
+                      <i class="fa-solid fa-trash"></i>
+                  </div>
               </div>
+
 
             </div>
               
             <!-- SKILLS -->
             <div class="section">
               <h3>Skills</h3>
-              <label style="margin-bottom: 15px">Choose 5 important skills that you think are important for the Employer.</label>
+              <label style="margin-bottom: 15px">Choose a few important skills that you think are important for the Employer.</label>
               <br>
-                <div class="skills-container">
-                    <div class="row skills-row">
-                        <div class="form-group col-md-6">
-                            <label>Skill #1</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="skill_name1"
-                            />
-                          </div>
-                        <div class="form-group col-md-6">
-                            <label>Skill Level</label>
-                            <input
-                              type="range"
-                              class="form-range"
-                              name="skill_range1"
-                            />
-                          </div>
-                    </div>
-      
-                    <div class="row skills-row">
-                        <div class="form-group col-md-6">
-                            <label>Skill #2</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="skill_name2"
-                            />
-                          </div>
-                        <div class="form-group col-md-6">
-                            <label>Skill Level</label>
-                            <input
-                              type="range"
-                              class="form-range"
-                              name="skill_range2"
-                            />
-                          </div>
-                    </div>
-      
-                    <div class="row skills-row">
-                        <div class="form-group col-md-6">
-                            <label>Skill #3</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="skill_name3"
-                            />
-                          </div>
-                        <div class="form-group col-md-6">
-                            <label>Skill Level</label>
-                            <input
-                              type="range"
-                              class="form-range"
-                              name="skill_range3"
-                            />
-                          </div>
-                    </div>
-      
-                    <div class="row skills-row">
-                        <div class="form-group col-md-6">
-                            <label>Skill #4</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="skill_name4"
-                            />
-                          </div>
-                        <div class="form-group col-md-6">
-                            <label>Skill Level</label>
-                            <input
-                              type="range"
-                              class="form-range"
-                              name="skill_range4"
-                            />
-                          </div>
-                    </div>
-      
-                    <div class="row skills-row">
-                        <div class="form-group col-md-6">
-                            <label>Skill #5</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="skill_name5"
-                            />
-                          </div>
-                        <div class="form-group col-md-6">
-                            <label>Skill Level</label>
-                            <input
-                              type="range"
-                              class="form-range"
-                              name="skill_range5"
-                            />
-                          </div>
-                    </div>
+                <div>
+                  <i class="fa-solid fa-plus" onclick="SkillsBox(event)"></i>
                 </div>
+
+                <div class="skills-container">
+                    
+                </div>
+
             </div>
           </div>
               
@@ -312,6 +237,7 @@
     <!-- COMPONENTS -->
     <script src="{% static 'cvapp/components/ExperienceForm.js' %}"></script>
     <script src="{% static 'cvapp/components/EducationForm.js' %}"></script>
+    <script src="{% static 'cvapp/components/SkillsBox.js' %}"></script>
 
   </body>
 </html>
