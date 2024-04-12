@@ -17,6 +17,7 @@
     <div class="main">
       <div class="col left-container">
         <form class="information-user" onsubmit="onSubmit(event)">
+          {% csrf_token %}
           <div class="left_side">
 
             <!-- USER INFORMATION -->

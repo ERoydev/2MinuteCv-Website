@@ -1,13 +1,13 @@
 
-// async function loadTemplateOnHalf() {
-//     const div = document.querySelector('.right_side');
-//     const result = await fetch('template/');
-//     const template = await result.text();
+async function loadTemplateOnHalf() {
+    const div = document.querySelector('.right-side');
+    const result = await fetch('template/');
+    const template = await result.text();
 
-//     div.innerHTML = template
-//     div.style.transform = 'scale(0.9)';
-//     div.style.transformOrigin = 'top left'
-// }
+    div.innerHTML = template
+    div.style.transform = 'scale(0.9)';
+    div.style.transformOrigin = 'top left'
+}
 
 async function downloadPDF(e) {
     document.body.style.zoom = '67%';
@@ -80,11 +80,30 @@ function loadSkills() {
   }
 }
 
+function getCsrfToken() {
+    const csrftoken = document.querySelector('[name="csrfmiddlewaretoken"]').value;
+    return csrftoken;
+}
+
 function onSubmit(event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
-    
-    console.log(data)
+
+    fetch('template/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCsrfToken(),
+        },
+        body: JSON.stringify(data),
+    })
+    .then(res => {
+        loadTemplateOnHalf();
+    })
+    .catch(error => {
+        console.log('Error submiting form', error)
+    });
+
 }
