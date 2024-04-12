@@ -11,17 +11,21 @@ def create_cv(request):
 
 
 def template_view(request):
-  if request.method == 'POST':
-    formData = request.POST
-    context = {
-      'data': formData,  # Include form data in the context
-    }
-  else:
-    context = {  # Provide initial context data even for GET requests
-      "name": "Emil Roydev"  # Example initial data (optional)
-    }
+    if request.method == 'POST':
+        formData = request.POST
+        request.session['form_data'] = formData  # Store data in session
+        return JsonResponse({'message': 'Form data received successfully'})
+    else:
+        form_data_str = request.session.get('form_data')  # Retrieve data from session
+        form_data_sliced = str(form_data_str)[2:-6]
+        form_data = eval(form_data_sliced)
 
-  return render(request, 'cvapp/cv_templates/Modern Professional/template.html', context)
+        context = {key:value for key, value in form_data.items()}
+
+        print(context)
+        
+        return render(request, 'cvapp/cv_templates/Modern Professional/template.html', context)
+
 
 def user_data(request):
     if request.method == "POST":

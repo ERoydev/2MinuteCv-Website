@@ -90,16 +90,19 @@ function onSubmit(event) {
 
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
+    delete data.csrfmiddlewaretoken;
 
     fetch('template/', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded',
             'X-CSRFToken': getCsrfToken(),
         },
         body: JSON.stringify(data),
     })
-    .then(res => {
+    .then(response => response.json())
+    .then(result => {
+        console.log(result.data)
         loadTemplateOnHalf();
     })
     .catch(error => {
