@@ -25,12 +25,17 @@ skillItem.innerHTML = `
     </div>     
 `;
 
+let skillCounter = 0;
 
 
 function SkillsBox(event) {
     const container = event.target.parentNode.parentNode.querySelector('.skills-container');
-    const newItem = skillItem.cloneNode(true);
-    container.appendChild(newItem);
+
+    if (skillCounter < 5) {
+        const newItem = skillItem.cloneNode(true);
+        container.appendChild(newItem);
+        skillCounter += 1;
+    }
 }
 
 function DeleteSkillBox(event) {

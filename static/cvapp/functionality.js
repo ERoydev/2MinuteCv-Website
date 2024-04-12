@@ -83,5 +83,8 @@ function loadSkills() {
 function onSubmit(event) {
     event.preventDefault();
 
-    console.log('submited')
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+    
+    console.log(data)
 }

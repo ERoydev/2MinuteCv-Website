@@ -51,7 +51,7 @@ educationContainer.innerHTML = `
                 <div class="form-group col-md-12">
                     <div class="col2">
                         <label>Description</label>
-                        <textarea class="form-control" style="height: 200px!important;"></textarea>
+                        <textarea class="form-control" name="education_description" style="height: 200px!important;"></textarea>
                     </div>
 
                     <label>Write 200+ characters to increase your chances.</label>
@@ -64,14 +64,14 @@ educationContainer.innerHTML = `
 function EducationForm(event) {
     const divEl = event.target.parentNode.parentNode.parentNode;
     const attr = divEl.getAttribute('opened');
-
-    console.log(divEl)
-
+    
     if (!attr) {
-        divEl.setAttribute('opened', true);
-        divEl.appendChild(educationContainer);
+      divEl.setAttribute('opened', true);
+      educationContainer.style.display ='block';
     } else {
-        divEl.removeAttribute('opened');
-        divEl.removeChild(educationContainer);
+      divEl.removeAttribute('opened');
+      educationContainer.style.display = 'none';
     }
-}
+    
+    divEl.appendChild(educationContainer);
+  }

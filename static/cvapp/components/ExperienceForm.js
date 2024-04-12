@@ -61,7 +61,7 @@ experienceContainer.innerHTML = `
                     <div class="col2">
                         <label>Description</label>
     
-                        <textarea class="form-control" style="height: 200px!important;"></textarea>
+                        <textarea class="form-control" name="experience_description" style="height: 200px!important;"></textarea>
                     </div>
     
                     <label>Write 200+ characters to increase your chances.</label>
@@ -74,9 +74,11 @@ function ExperienceForm(event) {
 
     if (!attr) {
         divEl.setAttribute('opened', true);
-        divEl.appendChild(experienceContainer);
+        experienceContainer.style.display = 'block';
     } else {
         divEl.removeAttribute('opened');
-        divEl.removeChild(experienceContainer);
+        experienceContainer.style.display='none';
     }
+
+    divEl.appendChild(experienceContainer)
 }
