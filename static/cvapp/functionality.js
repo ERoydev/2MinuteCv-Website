@@ -9,34 +9,29 @@ async function loadTemplateOnHalf() {
     div.style.transformOrigin = 'top left'
 }
 
-
-
 async function downloadPDF(e) {
-document.body.style.zoom = '67%';
+    document.body.style.zoom = '67%';
 
-// Downloading
-let downloading = document.querySelector('.template-container');
-let doc = new jsPDF(1, "pt");
+    // Downloading
+    let downloading = document.querySelector('.template-container');
+    let doc = new jsPDF(1, "pt");
 
-await html2canvas(downloading, {
-    allowTaint: true,
-    useCORS: true,
-    width: 1175,
-    height: 1320,
-}).then((canvas) => {
+    await html2canvas(downloading, {
+        allowTaint: true,
+        useCORS: true,
+        width: 1175,
+        height: 1320,
+    }).then((canvas) => {
 
-    // Canvas (Convert to PNG)
-    doc.addImage(canvas.toDataURL("image/png"), 'PNG', 0, 0, 700, 842);
-})
+        // Canvas (Convert to PNG)
+        doc.addImage(canvas.toDataURL("image/png"), 'PNG', 0, 0, 700, 842);
+    })
 
-document.body.style.zoom = '100%';
-doc.save("Document.pdf");
-}
-
-
+    document.body.style.zoom = '100%';
+    doc.save("Document.pdf");
+    }
 
 function experienceField(id_v) {
-
     const Boxes = Array.from(document.querySelectorAll('.experience-box'));
     const currentBox = Boxes[id_v];
     const fieldBoxElement = currentBox.children[1];
@@ -53,8 +48,6 @@ function experienceField(id_v) {
     fieldBoxElement.appendChild(fieldBox);
     fieldBox.style.display='block';
     fieldBoxElement.value=true;
-
-
 }
 
 function educationField(id_v) {
@@ -86,5 +79,3 @@ function loadSkills() {
     divEl.style.display='none'
   }
 }
-
-

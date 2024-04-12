@@ -1,0 +1,52 @@
+
+.experience-box {
+    border: 1px solid rgb(209, 209, 209);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+.profession {
+    padding-bottom: 0.3em;
+}
+
+.inside-box {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    position: relative;
+}
+
+.experience-box:focus,
+.experience-box:hover {
+    border: 1px solid rgba(31, 125, 180, 0.671);
+    cursor: pointer;
+    transition: 0.3s border ease-in;
+    
+    .dropdown-btn {
+        color: rgb(14, 87, 129);
+        transition: 0.3s color ease-in;
+    }
+    
+}
+
+.dropdown-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.col2 textarea {
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 5px;
+}
+
+.col2 textarea:focus,
+.col2 textarea:hover {
+    border: 1px solid rgba(79, 102, 177, 0.637);
+}
+
+.experience-container .col2 {
+    width: 100%;
+    margin: 0;
+}

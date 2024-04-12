@@ -1,0 +1,36 @@
+
+.education-box {
+    border: 1px solid rgb(209, 209, 209);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+.education-type {
+    padding-bottom: 0.3em;
+}
+
+.inside-box {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    position: relative;
+}
+
+
+.education-box:focus,
+.education-box:hover {
+    border: 1px solid rgba(31, 125, 180, 0.671);
+    cursor: pointer;
+    transition: 0.3s border ease-in;
+    
+    .dropdown-btn {
+        color: rgb(14, 87, 129);
+        transition: 0.3s color ease-in;
+    }
+    
+}
+
+.education-box .col2 {
+    width: 100%;
+    margin: 0;
+}

@@ -6,475 +6,312 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- BOOTSTRAP -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
       <title>Document</title>
 
-      <link rel="stylesheet" href="{% static 'cvapp/create_cv.css' %}" />
+      <link rel="stylesheet" href="{% static 'cvapp/styles/site.css' %}" />
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </head>
 
   <body>
-    <div class="row">
+    <div class="main">
       <div class="col left-container">
-        <div class="left_side">
+        <form class="information-user">
+          <div class="left_side">
 
             <!-- USER INFORMATION -->
-          <form>
-            <div class="row">
-              <div class="form-group col-md-6">
-                <label for="inputEmail4">Wanted Job Title</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="job_title"
-                  placeholder="e.g. Developer"
-                />
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-md-6">
-                <label>First Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="first_name"
-                />
+            <div class="section">
+
+              <div class="row">
+                <div class="form-group">
+                  <label>Wanted Job Title</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="job_title"
+                    placeholder="e.g. Developer"
+                  />
+                </div>
               </div>
 
-              <div class="form-group col-md-6">
-                <label>Last Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="last_name"
-                />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="form-group col-md-6">
-                <label>Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  name="email"
-                />
-              </div>
-
-              <div class="form-group col-md-6">
-                <label>Phone</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="phone"
-                />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="form-group col-md-6">
-                <label>Country</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="country"
-                />
-              </div>
-
-              <div class="form-group col-md-6">
-                <label>City</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="city"
-                />
-              </div>
-
-              <div class="form-group col-md-6">
-                <label>Address</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="address"
-                />
-              </div>
-
-              <div class="form-group col-md-6">
-                <label>Driving License</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="driving_license"
-                />
-              </div>
-            </div>
-          </form>
-        </div>
-
-          <!-- PROFESSIONAL SUMMARY -->
-        <div class="section">
-          <h3>Professional Summary</h3>
-          <label class="summary-help">Write short sentences to make reader interested. Mention your experience, biggest achievements, qualities and skills.</label>
-          <div class="row main-text">
-            <div class="col1">
-                <div class="second box">
-                  <button class="summary-button" type="button"
-                    onclick="f2(this)">
-                    <i class="fa-solid fa-bold"></i>
-                  </button>
-                  <button class="summary-button" type="button" onclick="f3(this)">
-                    <i class="fa-solid fa-italic"></i>
-                  </button>
-                  <button class="summary-button" type="button" onclick="f4(this)">
-                  <i class="fa-solid fa-underline"></i>
-                </button>
+              <div class="row">
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="first_name"
+                  />
                 </div>
 
-                <div class="fourth box">
-                  <button class="summary-button" type="button" onclick="f8(this)">
-                    aA
-                  </button>
-                  <input type="color" onchange="f10(this)">
+                <div class="form-group">
+                  <label>Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="last_name"
+                  />
                 </div>
-            </div>
-            <br>
+              </div>
 
-            <div class="col2">
-              <textarea id="textarea" placeholder="Your text here"></textarea>
-            </div>
-          
-          </div>
-        </div>
-        <label>Write to 250 characters max.</label>
+              <div class="row">
+                <div class="form-group">
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                  />
+                </div>
 
-        <div class="section">
+                <div class="form-group">
+                  <label>Phone</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="phone"
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group">
+                  <label>Country</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="country"
+                  />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label>City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="city"
+                  />
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="form-group">
+                  <label>Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="address"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Driving License</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="driving_license"
+                  />
+                </div>
+              </div>
+            </div>
+
+              <!-- PROFESSIONAL SUMMARY -->
+            <div class="section">
+              <h3>Professional Summary</h3>
+              <label class="summary-help">Write short sentences to make reader interested. Mention your experience, biggest achievements, qualities and skills.</label>
+
+              <div class="row main-text">
+                <div class="col1">
+                    <div class="second box">
+                      <button class="summary-button" type="button"
+                        onclick="f2(this)">
+                        <i class="fa-solid fa-bold"></i>
+                      </button>
+
+                      <button class="summary-button" type="button" onclick="f3(this)">
+                        <i class="fa-solid fa-italic"></i>
+                      </button>
+                      
+                      <button class="summary-button" type="button" onclick="f4(this)">
+                      <i class="fa-solid fa-underline"></i>
+                    </button>
+                    </div>
+
+                    <div class="fourth box">
+                      <button class="summary-button" type="button" onclick="f8(this)">
+                        aA
+                      </button>
+                      <input type="color" onchange="f10(this)">
+                    </div>
+                </div>
+                <br>
+
+                <div class="col2">
+                  <textarea id="textarea" placeholder="Your text here"></textarea>
+                </div>
+                
+              </div>
+              <label>Write to 250 characters max.</label>
+
+            </div>
 
             <!-- EXPERIENCE -->
-          <h3>Experience</h3>
-            <label class="summary-help">Add your past experience so it can add value to your resume.</label>
+            <div class="section">
 
-            <div class="experience-box">
-                <div class="content">
-                    <div onclick="experienceField(0)">
-                        <p class="profession">Add your profession</p>
-                        <small class="time-working">Start - End date</small>
-                        <i class="fa-solid fa-arrow-down-short-wide"></i>
+              <h3>Experience</h3>
+                <label class="summary-help">Add your past experience so it can add value to your resume.</label>
+
+                <div class="experience-box">
+                    <div class="content">
+                        <div onclick="ExperienceForm(event)" class="inside-box">
+                            <p class="profession">Add your profession</p>
+                            <small class="time-working">Start - End date</small>
+                            <i class="fa-solid fa-arrow-down-short-wide dropdown-btn"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="field-box" value="false">
-
-                </div>
+              
             </div>
 
-            <div class="experience-box">
-                <div class="content">
-                   <div onclick="experienceField(1)">
-                        <p class="profession">Add your profession</p>
-                        <small class="time-working">Start - End date</small>
-                        <i class="fa-solid fa-arrow-down-short-wide"></i>
-                    </div>
-                </div>
-                <div class="field-box" value="false">
-
-                </div>
-            </div>
-
-           <div class="experience-box">
-                <div class="content">
-                    <div onclick="experienceField(2)">
-                        <p class="profession">Add your profession</p>
-                        <small class="time-working">Start - End date</small>
-                        <i class="fa-solid fa-arrow-down-short-wide"></i>
-                    </div>
-                </div>
-               <div class="field-box" value="false">
-
-                </div>
-            </div>
-
-            <div class="experience-container">
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <label>Job Title</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="experience_job_title"
-                        />
-                      </div>
-                    <div class="form-group col-md-6">
-                        <label>Employer</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="experience_employer"
-                        />
-                      </div>
-                </div>
-
-                <div class="row">
-                    <div class="form-group col-md-3">
-                        <label>Start Date</label>
-                        <input
-                          type="date"
-                          class="form-control"
-                          name="experience_start"
-                        />
-                      </div>
-                    <div class="form-group col-md-3">
-                        <label>End Date</label>
-                        <input
-                          type="date"
-                          class="form-control"
-                          name="experience_end"
-                        />
-                      </div>
-                    <div class="form-group col-md-6">
-                        <label>City</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="experience_city"
-                        />
-                      </div>
-                </div>
-
-                <div class="form-group col-md-12">
-                    <div class="col2">
-                        <label>Description</label>
-                        <textarea class="form-control" style="height: 200px!important;"></textarea>
-                    </div>
-                    <label>Write 200+ characters to increase your chances.</label>
-                </div>
-            </div>
-        </div>
-
-      <!-- EDUCATION -->
-          <h3>Education</h3>
-          <label class="summary-help">Add your education if any.</label>
-
+            <!-- EDUCATION -->
+            <div class="section">
+              <h3>Education</h3>
+              <label class="summary-help">Add your education if any.</label>
+              
               <div class="education-box">
-                    <div class="content">
-                        <div onclick="educationField(0)">
-                            <p class="education-type">Add your education</p>
-                            <small class="study-time">Start - End date</small>
-                            <i class="fa-solid fa-arrow-down-short-wide"></i>
-                        </div>
-                    </div>
-                    <div class="field-box" value="false">
-
-                    </div>
-                </div>
-
-              <div class="education-box">
-                    <div class="content">
-                        <div onclick="educationField(1)">
-                            <p class="education-type">Add your education</p>
-                            <small class="study-time">Start - End date</small>
-                            <i class="fa-solid fa-arrow-down-short-wide"></i>
-                        </div>
-                    </div>
-                    <div class="field-box" value="false">
-
-                    </div>
-                </div>
-
-                <div class="education-box">
-                    <div class="content">
-                        <div onclick="educationField(2)">
-                            <p class="education-type">Add your education</p>
-                            <small class="study-time">Start - End date</small>
-                            <i class="fa-solid fa-arrow-down-short-wide"></i>
-                        </div>
-                    </div>
-                    <div class="field-box" value="false">
-
-                    </div>
-                </div>
-
-
-              <div class="education-container">
-                  <div class="row">
-                        <div class="form-group col-md-6">
-                            <label>School/University</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="education_school"
-                            />
-                          </div>
-                        <div class="form-group col-md-6">
-                            <label>Degree</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="education_degree"
-                            />
-                          </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="form-group col-md-3">
-                            <label>Start Date</label>
-                            <input
-                              type="date"
-                              class="form-control"
-                              name="education_start"
-                            />
-                          </div>
-                        <div class="form-group col-md-3">
-                            <label>End Date</label>
-                            <input
-                              type="date"
-                              class="form-control"
-                              name="education_end"
-                            />
-                          </div>
-                        <div class="form-group col-md-6">
-                            <label>City</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="education_city"
-                            />
-                          </div>
-                    </div>
-
-                <div class="form-group col-md-12">
-                    <div class="col2">
-                        <label>Description</label>
-                        <textarea class="form-control" style="height: 200px!important;"></textarea>
-                    </div>
-                </div>
+                  <div class="content">
+                      <div onclick="EducationForm(event)" class="inside-box">
+                          <p class="education-type">Add your education</p>
+                          <small class="study-time">Start - End date</small>
+                          <i class="fa-solid fa-arrow-down-short-wide dropdown-btn"></i>
+                      </div>
+                  </div>
               </div>
 
-          <!-- SKILLS -->
-          <h3>Skills</h3>
-          <label style="margin-bottom: 15px">Choose 5 important skills that you think are important for the Employer.</label>
-          <br>
-            <div class="skills-container">
-                <div class="row skills-row">
-                    <div class="form-group col-md-6">
-                        <label>Skill #1</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="skill_name1"
-                        />
-                      </div>
-                    <div class="form-group col-md-6">
-                        <label>Skill Level</label>
-                        <input
-                          type="range"
-                          class="form-range"
-                          name="skill_range1"
-                        />
-                      </div>
-                </div>
-
-                <div class="row skills-row">
-                    <div class="form-group col-md-6">
-                        <label>Skill #2</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="skill_name2"
-                        />
-                      </div>
-                    <div class="form-group col-md-6">
-                        <label>Skill Level</label>
-                        <input
-                          type="range"
-                          class="form-range"
-                          name="skill_range2"
-                        />
-                      </div>
-                </div>
-
-                <div class="row skills-row">
-                    <div class="form-group col-md-6">
-                        <label>Skill #3</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="skill_name3"
-                        />
-                      </div>
-                    <div class="form-group col-md-6">
-                        <label>Skill Level</label>
-                        <input
-                          type="range"
-                          class="form-range"
-                          name="skill_range3"
-                        />
-                      </div>
-                </div>
-
-                <div class="row skills-row">
-                    <div class="form-group col-md-6">
-                        <label>Skill #4</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="skill_name4"
-                        />
-                      </div>
-                    <div class="form-group col-md-6">
-                        <label>Skill Level</label>
-                        <input
-                          type="range"
-                          class="form-range"
-                          name="skill_range4"
-                        />
-                      </div>
-                </div>
-
-                <div class="row skills-row">
-                    <div class="form-group col-md-6">
-                        <label>Skill #5</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="skill_name5"
-                        />
-                      </div>
-                    <div class="form-group col-md-6">
-                        <label>Skill Level</label>
-                        <input
-                          type="range"
-                          class="form-range"
-                          name="skill_range5"
-                        />
-                      </div>
+            </div>
+              
+            <!-- SKILLS -->
+            <div class="section">
+              <h3>Skills</h3>
+              <label style="margin-bottom: 15px">Choose 5 important skills that you think are important for the Employer.</label>
+              <br>
+                <div class="skills-container">
+                    <div class="row skills-row">
+                        <div class="form-group col-md-6">
+                            <label>Skill #1</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="skill_name1"
+                            />
+                          </div>
+                        <div class="form-group col-md-6">
+                            <label>Skill Level</label>
+                            <input
+                              type="range"
+                              class="form-range"
+                              name="skill_range1"
+                            />
+                          </div>
+                    </div>
+      
+                    <div class="row skills-row">
+                        <div class="form-group col-md-6">
+                            <label>Skill #2</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="skill_name2"
+                            />
+                          </div>
+                        <div class="form-group col-md-6">
+                            <label>Skill Level</label>
+                            <input
+                              type="range"
+                              class="form-range"
+                              name="skill_range2"
+                            />
+                          </div>
+                    </div>
+      
+                    <div class="row skills-row">
+                        <div class="form-group col-md-6">
+                            <label>Skill #3</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="skill_name3"
+                            />
+                          </div>
+                        <div class="form-group col-md-6">
+                            <label>Skill Level</label>
+                            <input
+                              type="range"
+                              class="form-range"
+                              name="skill_range3"
+                            />
+                          </div>
+                    </div>
+      
+                    <div class="row skills-row">
+                        <div class="form-group col-md-6">
+                            <label>Skill #4</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="skill_name4"
+                            />
+                          </div>
+                        <div class="form-group col-md-6">
+                            <label>Skill Level</label>
+                            <input
+                              type="range"
+                              class="form-range"
+                              name="skill_range4"
+                            />
+                          </div>
+                    </div>
+      
+                    <div class="row skills-row">
+                        <div class="form-group col-md-6">
+                            <label>Skill #5</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="skill_name5"
+                            />
+                          </div>
+                        <div class="form-group col-md-6">
+                            <label>Skill Level</label>
+                            <input
+                              type="range"
+                              class="form-range"
+                              name="skill_range5"
+                            />
+                          </div>
+                    </div>
                 </div>
             </div>
+          </div>
+              
           <input type="submit" class="form-group btn btn-primary col-md-12" value="Submit" onclick="loadTemplateOnHalf()" />
+        </form>
       </div>
 
-      <div class="col half">
-        <div class="right_side">
+      <div class="col right">
+        <div class="right-side">
         </div>
       </div>
     </div>
 
-    <!-- BOOTSTRAP JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-
     <!-- TEXT EDITOR JS -->
-    <script src="{% static 'cvapp/create_cv.js' %}"></script>
+    <script src="{% static 'cvapp/summary_box.js' %}"></script>
     <script src="{% static 'cvapp/functionality.js' %}"></script>
+
+    <!-- COMPONENTS -->
+    <script src="{% static 'cvapp/components/ExperienceForm.js' %}"></script>
+    <script src="{% static 'cvapp/components/EducationForm.js' %}"></script>
+
   </body>
 </html>

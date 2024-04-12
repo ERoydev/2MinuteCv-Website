@@ -1,0 +1,31 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.7em 1em;
+}
+
+.form-group .row {
+    
+}
+
+label {
+  color: rgba(104, 104, 104, 0.781);
+  font-weight: 500;
+  font-size: 0.8em;
+  margin-bottom: 6px;
+}
+
+
+.form-group input {
+    border-radius: 5px;
+    border: 1px solid rgb(180, 180, 180);
+    padding: 0.2em;
+    outline: none;
+    min-width: 100%;
+}
+
+.form-group input:focus,
+.form-group input:hover {
+  border: 2px solid rgba(79, 102, 177, 0.637);
+}

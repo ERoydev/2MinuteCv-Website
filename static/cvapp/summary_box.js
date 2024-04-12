@@ -41,9 +41,6 @@ function f8(e) {
   }
 }
 
-function f9(e) {
-  textare;
-}
 
 function f10(e) {
   let value = e.value;

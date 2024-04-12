@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
+from django.http import JsonResponse
 # Create your views here.
 
 
@@ -10,21 +11,15 @@ def create_cv(request):
 
 
 def template_view(request):
-    return render(request, 'cvapp/cv_templates/Modern Professional/template.html')
+    context = {
+        "name": "Emil Roydev"
+    }
 
+    return render(request, 'cvapp/cv_templates/Modern Professional/template.html', context)
 
-def handle_skills(request):
+def user_data(request):
     if request.method == "POST":
-        skill_name = request.POST['skill_name']
-        skill_range = request.POST['skill_range']
+        first_name = request.POST.get('first_name')
+        print(first_name)
 
-        print('yesss')
-
-        context = {
-            'skill_name': skill_name,
-            'skill_range': skill_range
-        }
-
-        return render(request, 'create_cv.html', context)
-
-    return redirect('create_cv')
+    return render(request, 'create_cv.html')

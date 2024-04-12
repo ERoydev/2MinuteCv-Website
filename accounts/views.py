@@ -19,6 +19,8 @@ def login_user(request):
         password = request.POST['password']
         user = authenticate(request, username=email, password=password)
 
+        print(email, password)
+
         if user is not None:
             login(request, user)
             return redirect('my_account')
@@ -54,7 +56,7 @@ def register_user(request):
                 email = request.POST['email']
                 password = request.POST['password']
                 confirm_password = request.POST['confirm_password']
-                user = User.objects.create_user(email)
+                user = User.objects.create_user(username=email, password=password)
                 user.save()
 
                 user_profile = UserProfile.objects.create(username=email)
