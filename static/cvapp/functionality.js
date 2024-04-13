@@ -85,12 +85,95 @@ function getCsrfToken() {
     return csrftoken;
 }
 
+function educationFormData(formData) {
+   const obj = {};
+
+    const educationFields = ['education_school',
+            'education_degree',
+            'education_start',
+            'education_end',
+            'education_city', 
+            'education_description'
+        ]
+    
+    let serial = 1;
+    let counter = 0;
+    for(let item of formData) {
+        if(educationFields.includes(item[0])) {
+            obj[`${item[0]}${serial}`] = item[1]
+            counter += 1
+
+            if (counter == 6) {
+                counter = 0;
+                serial += 1;
+            }
+        }
+    }
+
+    return obj
+}
+function experienceFormData(formData) {
+    const obj = {};
+
+    const experienceFields = ['experience_job_title',
+            'experience_employer',
+            'experience_start',
+            'experience_end',
+            'experience_city', 
+            'experience_description'
+        ]
+    
+    let serial = 1;
+    let counter = 0;
+    for(let item of formData) {
+        if(experienceFields.includes(item[0])) {
+            obj[`${item[0]}${serial}`] = item[1]
+            counter += 1
+
+            if (counter == 6) {
+                counter = 0;
+                serial += 1;
+            }
+        }
+    }
+
+    return obj
+}
+
+function deleteFromFinalObject(data) {
+    const propertiesToRemove = [
+            'experience_job_title',
+            'experience_employer',
+            'experience_start',
+            'experience_end',
+            'experience_city', 
+            'experience_description',
+            'csrfmiddlewaretoken',
+            'education_school',
+            'education_degree',
+            'education_start',
+            'education_end',
+            'education_city', 
+            'education_description',
+        ]
+
+    for (const prop of propertiesToRemove) {
+        delete data[prop];
+    }
+    return data;
+}
+
 function onSubmit(event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData.entries());
-    delete data.csrfmiddlewaretoken;
+    const experienceData = experienceFormData(formData);
+    console.log(experienceData)
+    const educationData = educationFormData(formData);
+    console.log(educationData)
+    let data = Object.fromEntries(formData.entries());
+    data = {...deleteFromFinalObject(data), ...experienceData, ...educationData};
+    console.log(data)
 
     fetch('template/', {
         method: 'POST',
