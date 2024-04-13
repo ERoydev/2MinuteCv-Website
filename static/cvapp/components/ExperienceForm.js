@@ -70,6 +70,7 @@ experienceContainer.innerHTML = `
         `
 function ExperienceForm(event) {
     const divEl = event.target.parentNode.parentNode.parentNode;
+    const experienceform = experienceContainer.cloneNode(true);
     const attr = divEl.getAttribute('opened');
 
     if (!attr) {
@@ -80,5 +81,5 @@ function ExperienceForm(event) {
         experienceContainer.style.display='none';
     }
 
-    divEl.appendChild(experienceContainer)
+    divEl.appendChild(experienceform)
 }

@@ -26,7 +26,7 @@
           <div class="imgBx">
             <img src="#" />
           </div>
-          <h2>{{first_name}} {{last_name}}<br /><span>Software engineer</span></h2>
+          <h2>{{first_name}} {{last_name}}<br /><span>{{job_title}}</span></h2>
         </div>
 
         <div class="contactInfo">
@@ -36,32 +36,28 @@
               <span class="icon"
                 ><i class="fa fa-phone" aria-hidden="true"></i
               ></span>
-              <span class="text">+1 334 5431 645</span>
+              <span class="text">{{phone}}</span>
             </li>
             <li>
               <span class="icon"
                 ><i class="fa fa-envelope" aria-hidden="true"></i
               ></span>
-              <span class="text">rey_willis@gmail.com</span>
+              <span class="text">{{email}}</span>
             </li>
-            <li>
-              <span class="icon"
-                ><i class="fa fa-globe" aria-hidden="true"></i
-              ></span>
-              <span class="text">www.mywebsite.com</span>
-            </li>
-            <li>
-              <span class="icon"
-                ><i class="fa fa-linkedin-square" aria-hidden="true"></i
-              ></span>
-              <span class="text">www.linkedin.com/me</span>
-            </li>
+
             <li>
               <span class="icon"
                 ><i class="fa fa-map-marker" aria-hidden="true"></i
               ></span>
-              <span class="text">Bucuresti, Romania</span>
+              <span class="text">{{country}} {{city}}</span>
             </li>
+
+            <li>
+              <span class="icon"
+                ><i class="fa-solid fa-map"></i></span>
+              <span class="text">{{address}} {{city}}</span>
+            </li>
+
           </ul>
         </div>
 
@@ -71,16 +67,6 @@
             <li>
               <h5>2011 - 2016</h5>
               <h4>Bachelor Degree in Computer Science</h4>
-              <h4>Harward</h4>
-            </li>
-            <li>
-              <h5>2019 - 2023</h5>
-              <h4>Research Scientist</h4>
-              <h4>University</h4>
-            </li>
-            <li>
-              <h5>2009 - 2011</h5>
-              <h4>Mathematics</h4>
               <h4>Harward</h4>
             </li>
           </ul>
@@ -108,12 +94,7 @@
         <div class="about">
           <h2 class="title2">Profile</h2>
           <p>
-            Dedicated and highly skilled Software Engineer with 15 years of
-            experience in designing, developing, and maintaining software
-            solutions. Proven expertise in full-stack web development, with a
-            strong focus on front-end development and mobile app development, .
-            Adept at collaborating with cross-functional teams to deliver
-            high-quality software products within established timelines.
+            {{profile_text}}
           </p>
         </div>
         <div class="about">
